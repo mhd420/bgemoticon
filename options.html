@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Badgame Custom Emoticons</title>
+    <link rel="stylesheet" href="css/picnic.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="visual">
+        <h1>Badger Emoticons</h1>
+        <table class="primary" id="emoticonTable">
+            <thead>
+                <tr>
+                    <th>Preview</th>
+                    <th>Shortcut</th>
+                    <th>URL</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+
+        <h3>Add a new emoticon</h3>
+
+        <input type="text" id="addShortcut" placeholder="Shortcut">
+        <input type="text" id="addURL" placeholder="Image URL">
+        <button id="addEmoticon">Add emoticon</button>
+        
+        <button class="success" id="saveChanges">Save Changes</button>
+        
+        <hr>
+        
+        <h3>Import emoticon set</h3>
+        
+        <textarea id="importJSON" cols="30" rows="5"></textarea>
+        <button id="importEmoticons">Import</button> <button id="exportEmoticons">Export</button>
+        
+            
+    </div>
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <script src="js/options.js"></script>
+</body>
+
+</html>
