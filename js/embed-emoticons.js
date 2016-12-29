@@ -27,12 +27,23 @@ chrome.storage.sync.get({"emoticons": []},
     function(options) {
         emoticons = options.emoticons;
         
+        if (emoticons.length == 0)
+            return;
+
         $("#postmodify").submit(replaceShortcuts);
 
         // gross
-        var tr = $("<tr>");
-        tr.append("<td>");
-        tr.append($("<td>").append(generateCustomList()));
+        var customSmiley = $(
+            '<tr><td></td><td><a href="#" id="custom-smiley-expand"><b>Show custom smileys...</b></a></td></tr>' +
+            '<tr><td></td><td><div id="custom-smiley-container" style="display: none;"></div></td></tr>'
+        );
 
-        $("#postmodify > table.bordercolor > tbody > tr:nth-child(2) > td > table > tbody > tr:nth-child(8)").after(tr);
+        $("#custom-smiley-expand", customSmiley).click(function() {
+            $("#custom-smiley-container").toggle();
+            return false;
+        });
+
+        $("#custom-smiley-container", customSmiley).append(generateCustomList());
+
+        $("#postmodify > table.bordercolor > tbody > tr:nth-child(2) > td > table > tbody > tr:nth-child(8)").after(customSmiley);
     });

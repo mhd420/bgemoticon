@@ -2,7 +2,7 @@
     "manifest_version": 2,
     "name": "Badgame Custom Emoticons",
     "description": "Use cool custom emotes on Badgame.net, and have a good time with your friends.",
-    "version": "0.69",
+    "version": "0.70",
     
     "icons": {
         "16": "icon16.png",
